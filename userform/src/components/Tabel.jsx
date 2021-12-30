@@ -2,7 +2,7 @@ import {Row} from "./TabelRow";
 import "./Tabel.css"
 
 
-export const Tabel=({data})=>{
+export const Tabel=({data,del})=>{
 
    
     return <>
@@ -14,13 +14,16 @@ export const Tabel=({data})=>{
                 <th>Address</th>
                 <th>Salary</th>
                 <th>isMarried</th>
-               
+               <th>Delete</th>
                </tr>
             </thead>
             
             <tbody>
-                {data.map((e)=>(
-                    <Row value={e}/>    
+                {data.map((e,i)=>(
+                    <>
+                        <Row key={i} del={del} value={e}/> 
+                    </>
+                    
                 ))}
             </tbody>
        
