@@ -31,7 +31,7 @@ export const Form =({getData})=>{
     const submitData=(e)=>{
         e.preventDefault();
        
-        fetch("http://localhost:3001/formData",{
+        fetch("http://localhost:4001/formData",{
             method: "POST",
             body:JSON.stringify(formData),
             headers:{

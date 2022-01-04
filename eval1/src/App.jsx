@@ -9,7 +9,7 @@ function App() {
     getData();
   },[])
   const getData=()=>{
-    fetch(" http://localhost:3001/formData")
+    fetch(" http://localhost:4001/formData")
     .then(d=>d.json())
     .then(res=>{
         console.log("res",res);
